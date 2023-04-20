@@ -14,5 +14,18 @@
     <h2>Hello Spring Framework!!</h2>
 <%-- /home 주소 요청하면 home.jsp가 출력되도록--%>
     <a href="/home">home으로 가자</a>
+<%-- 버튼을 클릭하면 fun1 함수를 호출하고
+     fun1 함수는 /wakeup 주소를 호출하자
+      컨트롤러에 /wakeup 주소 요청에 대한 메서드를 정희하고 wakeup.jsp를 출력하도록 하자--%>
+    <button onclick="fun1()">wake up 주소 호출</button>
+    <%-- 주소에 파라미터를 함꼐 보내기 --%>
+<%-- 목적지: /req-param1, email="aa@aa.com", password='1q2w3e'를 요청 --%>
+    <a href="/req-param1?email=aa@aa.com&password=1q2w3e">파라미터 보내기</a>
+    <a href="/req-param2?name=하츄핑&age=5">파라미터 보내기</a>
 </body>
+<script>
+    const fun1 = () => {
+        location.href="/wakeup";
+    }
+</script>
 </html>
